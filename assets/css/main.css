@@ -1,0 +1,188 @@
+/*Colores a usar en la página web
+#AD2440 - Un tono de rojo oscuro.
+#7A3241 - Un tono de morado oscuro.
+#E00230 - Un tono de rojo brillante.
+#472C31 - Un tono de marrón oscuro.
+#33292B - Un tono de gris oscuro.*/
+/*@font-face { asignamos una fuente a nuestro archivo
+    font-family: ;
+    src: url(); Aqui colocamos la url donde se encuentra nuestra fuente
+}*/
+html{
+    font-family: 'Nunito Sans', sans-serif;
+}
+a{
+    text-decoration: none; /*Con esto quitamos los subrayados de un hyperlink*/
+    color: #E00230;
+}
+img{
+    max-width: 100%;
+}
+a:hover{/*Estado del selector*/
+    opacity: 0.4;
+}
+/* a:visited{
+
+}
+a:active{
+    background: red;
+}
+a:focus{ estado cuando tiene el foco (que se cambia con el tab)
+    background: red;
+} son estados del selector*/
+
+.title{
+    text-transform: uppercase;
+    text-align: center;
+}
+.container{
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh; /* 100%-Este porcentaje es relativo al nodo padre donde está contenido| 100vh signfica todo el alto de la pantalla*/
+    /* width: 100vw; vw es el total del ancho, pero por defecto los divs ya abarcan todo el ancho*/
+    display: flex; /*con esto vamos a lograr centrar el div del hijo, o sea el content*/
+    align-items: center;
+    justify-content: center;
+}
+.content{/*Estamos especificando que se estire todo el largo y ancho que pueda sin rebasar los valores máximos */
+    max-width: 960px;
+    width: 100%;
+    height: 80vh;
+    background-color: white;
+    /*box-shadow: diferenciaHorizontal diferenciaVertical desenfoque amplitud color;*/
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); /*Se hace un sombreado al rededor del div|si hay solo 3 valores, se ignora desenfoque y amplitud, si hay 4 valores se ignora amplitud | Las sombras tienen una posición relativa respecto al div, al poner una sombra negativa esta se irá hacia otro lado*/
+    border-radius: 4px;
+    position: relative;
+    padding: 1.8em;
+    overflow: scroll; /*Define como se comporta el contenido que se sale de las dimensions del elemento*/
+}
+.content{
+    padding: 1em;
+}
+
+td{
+    display: block;
+}
+td:nth-of-type(1){ /*Selecciona el numero siguiente respecto al padre, en este caso una celda*/
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #472C31;
+}
+th{
+    display: none;
+}
+.actions{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+.close{
+    height: 40px;
+    width: 40px;
+    color: white;
+    border-radius: 50%;
+    background-color: #AD2440;
+    display: inline-block; /*Se utiliza inline-block para lograr que el elemento no inicie otra linea pero se comporte como un bloque, comportarse como bloque significa que puede obtener un alto y un ancho especifico*/
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);font-weight: 300;
+    cursor: pointer;
+    display: flex; /*inicializamos el flexbox*/
+    align-items: center;/*Con esto centramos el contenido del div*/
+    justify-content: center; /*Con esto centramos el contenido de una linea*/
+}
+.paragraph{
+    line-height: 1.8em; /*1.8 veces la altura de la fuente actual*/
+    font-weight: 300;
+} 
+.red{
+    height: 200 px;
+    width: 100px;
+    background-color: red;
+}
+#boton-pago{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+}
+
+.table{
+    width: 100%;
+    border-spacing: 0;
+}
+.table td, table th{ /*Se hace referencia a dos selectores*/
+    padding: 1em;
+    text-align: left;
+}
+table tr:nth-child(even){
+    background-color: #7A3241;
+    color: white;
+}
+.fa-star, .fa-star-half-stroke{
+    color: yellow;
+}
+.title-item{
+    /* border-bottom-style: solid;
+    border-width: 2px;
+    border-color: #33292B; */
+    border-bottom: solid 2px #33292B; /*A esto se le conoce como shorthand properties */
+    padding-bottom: 1em;
+    font-size: 2em;
+}
+.position{
+    background-color:#33292B;
+    color: white;
+    padding: 0.8em;
+    /*Se pueden especificar las propiedades una por una, pero también se le puede asignar valor a los atributos por medio de un shorthand propertie
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;*/
+    border-radius: 4px;
+    margin-right: 0.5em;
+}
+.address{
+    font-weight: bold;
+    color: #33292B;
+    font-size: 2em;
+    margin-top: 2em;
+    display: inline-block;
+}
+.main-image{
+    float: left;
+    margin-right: 1em;
+    height: 250px;
+}
+/*
+div{
+    background:red;
+    width:200px;
+    height:100px;
+    position: static; es la que viene por defecto
+    position:relative; Esta posicion es una posicion relartiva a la que se encuentra el div originalmente
+    position:fixed; Esta posición es relativa al viewport, el viewport es lo que vemos
+    position: absolute; este es relativo al contendor más cercano (padre), si no tiene padre se hará relativo al viewport 
+    position:sticky; intercambia entre el relative y el fixed, dependiendo de si el elemento se sale del viewport por el scroll, un ejemplo son los menus de navegación
+    botton: 0px; se ponen las posiciones para los valores relativos, si no hay valores relativos estos no actuarán 
+    left: 200px;
+}*/
+
+@media (min-width:900px){
+    th{
+        display: table-cell;
+    }
+    td{
+        width:auto;
+        display: table-cell;
+    }
+    td:nth-last-child(1){
+        font-size: 1em;
+    }
+    .content{
+        padding: 1.8em;
+    }
+}
+@media (min-height:550px) {
+    .content{
+        height: 500px;
+    }
+} /*Media queries, nos permite aplicar propiedas solo si una condición se cumple

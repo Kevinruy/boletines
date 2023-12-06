@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pagina de pizzas</title>
+        <!--Así se debe de referenciar una stylesheet<link rel="stylesheet" href="./assets/css/main.css">-->
+        <!--<link rel="stylesheet" href="./fontawesome/css/all.css">-->
+        <link rel="stylesheet" href="./assets/css/main.css">
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,500;1,6..12,300;1,6..12,600&display=swap" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="./assets/css/node_modules/animate.css/animate.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    </head>
+    <body>
+        <div class="container"> <!--Va a contener toda la página, los div por lo general en cuanto a diseño ocupan todo el ancho de la pantalla pero de alto solo lo que necesitan-->
+            <div class="content animate__animated animate__backInLeft"> <!--Va a tener el contenido-->
+                <header> <!--Va a contener los encabezados-->
+                    <h1 class="title">Las mejores pizzas del mundo</h1><!--titulo-->
+                </header>
+                <table class="table"> <!--nos permite definir un elemento en forma de tabla-->
+                    <thead><!--Define el encabezado-->
+                        <th>#</th>
+                        <th>Nombre</th><!--Se nombra cada encabezado-->
+                        <th>Ubicación</th>
+                        <th>Calificación</th>
+                        <th>Acciones</th>
+                    </thead>
+                    <tbody><!--Define el cuerpo de la tabla-->
+                        <tr><!--Filas-->
+                            <td>1</td><!--Celdas-->
+                            <td>Little Caesars</td>
+                            <td>Arco Sur, Reserva Territorial, 91096 Xalapa-Enríquez, Ver.</td>
+                            <td><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"><i class="fa-solid fa-star"><i class="fa-solid fa-star"></i></td>
+                            <td>
+                                <a href="./restaurantes/LittleCaesars.html">Ver más</a>
+                            </td>
+                        </tr>
+                        <tr><!--Filas-->
+                            <td>2</td><!--Celdas-->
+                            <td>Domino's Pizza</td>
+                            <td>Carr. Xalapa-Veracruz. 680 L-8 Zona G, Plaza Américas Pastoressa, 91193 Xalapa-Enríquez, Ver.</td>
+                            <td><i class="fa-solid fa-star"><i class="fa-solid fa-star"><i class="fa-solid fa-star"><i class="fa-solid fa-star"><i class="fa-solid fa-star"></i></td>
+                            <td>
+                                <a href="./restaurantes/LittleCaesars.html">Ver más</a>
+                            </td>
+                        </tr>
+                        <tr><!--Filas-->
+                            <td>3</td><!--Celdas-->
+                            <td>Pizza Hut</td>
+                            <td>C. Lázaro Cárdenas 404, Sipeh Animas, 91180 Xalapa-Enríquez, Ver.</td>
+                            <td><i class="fa-solid fa-star"><i class="fa-solid fa-star"><i class="fa-solid fa-star"><i class="fa-regular fa-star-half-stroke"></i></i></td>
+                            <td></td>
+                        </tr>
+                        <tr><!--Filas-->
+                            <td>4</td><!--Celdas-->
+                            <td>Pizza los lagos</td>
+                            <td>Los lagos</td>
+                            <td><i class="fa-regular fa-star-half-stroke"></i></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="./javascript/main.js"></script>
+        <script src="https://kit.fontawesome.com/f8252742ae.js" crossorigin="anonymous"></script>
+    </body>
+</html>
